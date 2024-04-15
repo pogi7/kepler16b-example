@@ -7,6 +7,9 @@
     "queries": {
       "missions": "missions.sparql"
     },
+    "contextMenu": {
+      "commands": "missions.json"
+    },
     "rowMapping": {
       "id": "missions",
       "name": "Missions",

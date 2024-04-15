@@ -10,6 +10,9 @@
       "o2_id": "Objective 2 ID",
       "o2_name": "Objective 2 Name"
     },
+    "contextMenu": {
+      "commands": "objectives.json"
+    },
     "queries": {
       "obj-query": "objectives.sparql"
     },

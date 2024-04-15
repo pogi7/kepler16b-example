@@ -1,0 +1,21 @@
+PREFIX fse: <http://imce.jpl.nasa.gov/discipline/fse/fse#>
+
+select distinct ?lifecycle
+WHERE {
+  BIND(<${iri}> AS ?aIri)
+  ?aIri a fse:Assembly ;
+      fse:lifecycleState ?lifecycle ;
+}
+
+# PREFIX fse: <http://imce.jpl.nasa.gov/discipline/fse/fse#>
+
+# select distinct ?lifecycle
+# WHERE {
+#   Graph <http://srl.jpl.nasa.gov/efse/assemblies#2bbbd2b4-28f5-431f-b765-87f259b469a1>
+#   {
+#     BIND(<http://srl.jpl.nasa.gov/efse/assemblies#2bbbd2b4-28f5-431f-b765-87f259b469a1> AS ?aIri)
+#     ?aIri a fse:Assembly ;
+#     	fse:lifecycleState ?lifecycle ;
+#   }
+  
+# }
