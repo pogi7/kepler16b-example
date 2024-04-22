@@ -198,12 +198,12 @@ task owlToOml(type:io.opencaesar.owl2oml.Owl2OmlTask, dependsOn: [downloadDepend
 /*
  * A task to load the OML dataset to Fuseki
  */
-task load (dependsOn: owlLoad, group: 'vision')
+task load (dependsOn: owlLoad, group: "vision")
 
 /*
  * A task to save the OML dataset from Fuseki
  */
-task save (dependsOn: owlToOml, group: 'vision')
+task save (dependsOn: owlToOml, group: "vision")
 
 /*
  * A task to query the OML dataset in Fuseki

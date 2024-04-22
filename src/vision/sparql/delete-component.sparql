@@ -6,10 +6,11 @@ PREFIX components: 	<http://example.com/tutorial2/description/components#>
 PREFIX vim4:		<http://bipm.org/jcgm/vim4#>
 
 DELETE DATA {
+	graph <http://example.com/tutorial2/description/components> {
       	components:test a mission:Component ; 
                 rdf:type owl:NamedIndividual;
   		base:hasIdentifier "testID" ;
   		base:hasCanonicalName "testName" ;
     	base:contains components:orbiter-launch-system .
-
+	}
 }

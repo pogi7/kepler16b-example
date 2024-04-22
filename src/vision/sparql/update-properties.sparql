@@ -1,0 +1,33 @@
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX base: <http://example.com/tutorial2/vocabulary/base#>
+
+delete {
+  graph <http://example.com/tutorial2/description/objectives> {
+    ?anyIri a owl:NamedIndividual ;
+        base:hasIdentifier ?beforeId ;
+        base:hasCanonicalName ?beforeName .
+  }
+}
+insert {
+  graph <http://example.com/tutorial2/description/objectives> {
+    ?anyIri a owl:NamedIndividual ;
+        base:hasIdentifier ?afterId ;
+        base:hasCanonicalName ?afterName .
+  }
+}
+where {
+  BIND(<${iri}> AS ?anyIri)
+  BIND(${beforeId} AS ?beforeId)
+  BIND(${beforeName} AS ?beforeName)
+  BIND(${afterId} AS ?afterId)
+  BIND(${afterName} AS ?afterName)
+  
+  # BIND(<http://example.com/tutorial2/description/objectives#characterize-rocky-core> AS ?anyIri)
+  # BIND("O.04" AS ?beforeId)
+  # BIND("Characterize the rocky core of Kepler 16b" AS ?beforeName)
+  # BIND("TESTID" AS ?afterId)
+  # BIND("TESTNAME" AS ?afterName)
+}

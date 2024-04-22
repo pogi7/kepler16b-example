@@ -6,9 +6,11 @@ PREFIX objectives: 	<http://example.com/tutorial2/description/objectives#>
 
 INSERT DATA 
 {
-    objectives:test a mission:Objective ;
-        rdf:type owl:NamedIndividual;
-		base:hasIdentifier "testId1" ;
-		base:hasCanonicalName "testName1" ;
-	base:isAggregatedIn objectives:characterize-rocky-core-density .
+	graph <http://example.com/tutorial2/description/objectives> {
+		objectives:test a mission:Objective ;
+			rdf:type owl:NamedIndividual;
+			base:hasIdentifier "testId1" ;
+			base:hasCanonicalName "testName1" ;
+		base:isAggregatedIn objectives:characterize-rocky-core-density .
+	}
 }

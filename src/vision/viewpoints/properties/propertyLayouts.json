@@ -4,6 +4,7 @@
       "id": "general",
       "label": "General",
       "sparqlQuery": "general-properties.sparql",
+      "sparqlUpdate": "update-properties.sparql",
       "icon": "IconSettings",
       "groups": [
         {
